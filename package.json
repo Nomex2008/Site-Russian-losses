@@ -1,0 +1,18 @@
+{
+  "name": "lostarmour",
+  "version": "1.0.0",
+  "main": "cli.js",
+  "repository": "git@github.com:0m3r/lostarmour.git",
+  "author": "Alexander Kras'ko <0m3r.mail@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^19.2.2"
+  },
+  "scripts": {
+    "build": "git pull && node cli.js && node --check js/data.js && git commit -am 'up data' && git push",
+    "rebuild": "node cli.js",
+    "check": "node --check js/data.js"
+  }
+}

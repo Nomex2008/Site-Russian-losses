@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Russian losses in Ukraine</title>
+    <meta name="description" content="">
+
+    <link rel="preconnect" href="cdnjs.cloudflare.com">
+    <link rel="preconnect" href="fonts.googleapis.com">
+    <link rel="preconnect" href="ajax.googleapis.com">
+    <link rel="preconnect" href="www.googletagmanager.com">
+    <link rel="preconnect" href="s7.addthis.com">
+    <link rel="preconnect" href="cdn.jsdelivr.net">
+    <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="js/jquery.translate.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y8RND7KYL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4Y8RND7KYL');
+    </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fb0b63a463cc209"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <script src="js/translate.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/hash.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/modifiedFilter.js"></script>
+
+  </head>
+  <body>
+    <header class="floor floor--header">
+    </header>
+    <main class="floor floor--main">
+
+      <div class="image-gallery-wrapper">
+
+        <div id="controls" class="closed">
+
+          <div class="filter-toggler">
+            <span class="chevron"></span>
+            <span class="trn">Filter</span>
+          </div>
+
+          <div id="data-wrapper">
+            <div id="status-wrap">
+              <h2>
+                <span class="trn">Status:</span>
+              </h2>
+              <div id="status">
+              </div>
+            </div>
+            <div id="vehicleGroup-wrap">
+              <h2>
+                <span class="trn">Vehicle Group:</span>
+              </h2>
+              <div id="vehicleGroup">
+              </div>
+            </div>
+          </div>
+
+          <div id="vehicle-wrapper">
+              <input id="vehicle" placeholder="vehicle" />
+              <input id="modified" type="text" />
+              <button id="today" type="button">
+                <span class="trn">Today</span>
+              </button>
+              <button id="yesterday" type="button">
+                <span class="trn">Yesterday</span>
+              </button>
+          </div>
+
+          <input id="index" type="hidden" value="0" />
+
+          <div id="language-switcher">
+            <label class="trn" for="lang">Language:</label>
+              <select name="lang" id="lang">
+                <option value="en" selected="selected" >Eng</option>
+                <option value="ua">Uk</option>
+              </select>
+          </div>
+
+          <div id="sort-switcher">
+            <label class="trn" for="lang">Sort:</label>
+              <select name="sort" id="sort">
+                <option value="asc">Asc</option>
+                <option value="desc" selected="selected" >Desc</option>
+              </select>
+          </div>
+
+          <div id="results">
+            <span class="trn label">Images found:</span>
+            <span id="size"></span>
+          </div>
+
+          <div class="buttons">
+            <button id="apply" type="button">
+              <span class="trn">Apply Filter</span>
+            </button>
+            <button id="clear" type="button">
+              <span class="trn">Clear</span>
+            </button>
+            <button id="copylink" type="button">
+              <span class="trn">Copy Link</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- <a href="https://t.me/russianlossesinua" class="telegram"></a> -->
+
+        <div id="fotorama"
+            class="fotorama"
+              data-width="100%"
+              data-height="100%"
+              data-navposition="top"
+              data-allowfullscreen="true"
+              data-keyboard="true"
+              data-nav="thumbs">
+
+        </div>
+
+        <div id="overlay">
+          <div class="cv-spinner">
+            <span class="spinner"></span>
+          </div>
+        </div>
+
+
+      </div>
+
+      <iframe id="preview" style="border:0px;height:auto;width:500px;margin:5px;box-shadow: 0 0 16px 3px rgba(0,0,0,.2);" src="https://xn--r1a.website/s/russianlossesinua"></iframe>
+
+    </main>
+
+    <footer class="floor floor--footer">
+      <div class="floor__max-width">
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
+    
+        <p>© 2022</p>
+      </div>
+    </footer>
+  </body>
+  <script>
+
+$(function () {
+    var $fotoramaDiv = $('#fotorama').fotorama({
+      spinner: {
+        lines: 13,
+        color: 'rgba(0, 0, 0, .75)'
+      }
+    });
+    var fotorama = $fotoramaDiv.data('fotorama');
+
+    Filters.init(photos, vehicleGroups, vehicles, fotorama);
+
+    Filters.apply();
+
+    translator.lang($('#lang').val());
+
+    $('#apply').on('click', function() {
+      $(this).prop('disabled', true);
+      Filters.apply();
+      setTimeout(function(){
+        $('#apply').removeProp('disabled');
+      }, 300);
+    });
+
+    $('#lang').on('change',function() {
+      Loading.start();
+      translator.lang($('#lang').val());
+      Filters.apply();
+      Loading.stop();
+    });
+
+    $('#sort').on('change',function() {
+      Loading.start();
+      Filters.apply();
+      Loading.stop();
+    });
+
+    $('#vehicle').on('keypress', function(e) {
+        if(e.which == 13) {
+            Filters.apply();
+        }
+    });
+
+    $('#clear').on('click', function() {
+        $('#controls input[type="checkbox"]').each(function(i, checkbox) {
+          $(checkbox).prop('checked', false);
+        });
+        $('#vehicle').val('');
+        Hash.clear();
+        modifiedFilter.clear();
+        Filters.apply();
+    });
+
+    $('#copylink').on('click', function() {
+
+      navigator.clipboard.writeText(
+        window.location.href + '&' + 'index=' + fotorama.activeIndex
+      );
+    });
+
+    $(".filter-toggler").click(function() {
+      $("#controls").toggleClass("closed opened");
+    });
+
+    $('#today').on('click', function() {
+      const now = new Date();
+      const todayDate = modifiedFilter.toDate(now);
+      const startDate = `${todayDate} - ${todayDate}`;
+      modifiedFilter.setStartDate(startDate);
+      Filters.apply();
+    });
+    $('#yesterday').on('click', function() {
+      const now = new Date();
+      const date = new Date(now.setDate(now.getDate() - 1));
+      const todayDate = modifiedFilter.toDate(date);
+      const startDate = `${todayDate} - ${todayDate}`;
+      modifiedFilter.setStartDate(startDate);
+      Filters.apply();
+    });
+});
+  </script>
+</html>
