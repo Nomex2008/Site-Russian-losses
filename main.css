@@ -50,6 +50,13 @@ main {
     font-size: calc(1rem * 2);
     font-family: 'Tilt Prism', cursive;
 }
+/*header__button*/
+.header__button{
+    display: flex;
+
+    margin: 0 calc(1em*.6) 0 0;
+}
+
 .header__img {
     margin: 0 0 0 1%;
 }
@@ -58,7 +65,29 @@ main {
     width: 100px;
     border-radius: 10% / 50%;
 }
+/*Button airAlert*/
+.header__airAlert{
+    text-decoration: none;
+    padding: 10px 25px 10px 30px;
+    margin: 0 10px 0 5%;
+    
+    background: black;
+    transition: all 0.8s ease 0.2s;
+    
+    border-radius: 10px;
 
+    position: relative;
+}
+.header__airAlert:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 1);;
+}
+.header__airAlertIcon{
+    height: 30px;
+    position: absolute;
+    left: 6px;
+
+    border-radius: 10px;
+}
 /*Button telegram*/
 .header__telegram {
     text-decoration: none;
@@ -480,15 +509,6 @@ input#modified:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .header__telegram {
-        padding: 10px 20px 20px 20px;
-        margin: 0 1% 0 0;
-    }
-
-    .header__telegram-text{
-        font-size: 0px;
-        padding: 0;
-    }
     .buttons #copylink {
         margin-left: 0;
         margin-top: 10px;
@@ -515,8 +535,30 @@ input#modified:hover {
         height: 450px;
     }
 
+    /*airAlert*/
+    .header__airAlert{
+        padding: 10px 16px 20px 35px;
+        margin: 0 10px 0 5%;
+    }
+
+    /*header__telegram*/
+    .header__telegram {
+        padding: 10px 21px 18px 21px;
+        margin: 0 1% 0 0;
+    }
+
+    .header__telegram-text{
+        font-size: 0px;
+        padding: 0;
+    }
 }
 @media (max-width: 420px) {
+    /*Button airAlert*/
+        .header__airAlert{
+            padding: 10px 25px 10px 28px;
+            margin: 0 2px 0 3%;
+        }
+    /*iframe*/
     .iframe{
         overflow: hidden;
         height: 500px;
@@ -529,6 +571,26 @@ input#modified:hover {
     }
     .deepState__title {
         font-size: calc(1rem*1.6);
+    }
+}
+@media (max-width: 360px) {
+    /*airAlert*/
+    .header__airAlert{
+        padding: 0;
+    }
+    .header__airAlert img{
+        height: 0;
+        width: 0;
+    }
+    /*header__telegram*/
+    .header__telegram {
+        padding: 10px 21px 18px 21px;
+        margin: 0 1% 0 0.5px;
+    }
+
+    .header__telegram-text{
+        font-size: 0px;
+        padding: 0;
     }
 }
 @media (max-width: 320px) {
