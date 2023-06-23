@@ -321,6 +321,38 @@ input#modified:hover {
     box-shadow: 0 0 16px 3px rgba(0,0,0,.2);
 }
 
+.iframe__deapState{
+    width: 100%;
+    height: 600px;
+
+    border-radius: 10px;
+}
+
+.deepState {
+    width: 100%;
+    overflow: hidden;
+
+    margin: 20px 0;
+}
+.deepState__header {
+    display: flex;
+
+    
+}
+.deepState___logo {
+    display: flex;
+    align-items: start;
+}
+.deepState__img img{
+    width: 150px; 
+    height: auto;  
+
+    margin: 0 0 0 10px;
+}
+.deepState__title {
+    font-size: calc(1rem*2);
+}
+
 .fotorama__caption                { 
     top: 5px; 
     color: var(--button-text-dark); 
