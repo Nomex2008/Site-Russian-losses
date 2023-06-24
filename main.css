@@ -46,6 +46,7 @@ main {
 }
 .header__text {
     margin: 0 0 0 1%;
+    padding: 0 0 0 2.5%;
     
     font-size: calc(1rem * 2);
     font-family: 'Tilt Prism', cursive;
@@ -65,11 +66,11 @@ main {
     width: 100px;
     border-radius: 10% / 50%;
 }
-/*Button airAlert*/
-.header__airAlert{
+/*Button deepState*/
+.header__deepState {
     text-decoration: none;
-    padding: 10px 25px 10px 30px;
-    margin: 0 10px 0 5%;
+    padding: 10px 38px 10px 50px;
+    margin: 0 1% 0 1%;
     
     background: black;
     transition: all 0.8s ease 0.2s;
@@ -78,15 +79,46 @@ main {
 
     position: relative;
 }
-.header__airAlert:hover {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 1);;
+.header__deepState:hover {box-shadow: 0 0 40px rgba(0, 0, 0, 1);;}
+.header__deepStateIcon {
+    height: 45px;
+    position: absolute;
+    left: 6px;
+    top: 0px;
+
+    border-radius: 10px;
 }
+.header__deepState-text {
+    font-size: 0;
+    color: #fff;
+    text-decoration: none;
+}
+/*Button airAlert*/
+.header__airAlert{
+    text-decoration: none;
+    padding: 10px 25px 10px 30px;
+    margin: 0 10px 0 1%;
+    
+    background: black;
+    transition: all 0.8s ease 0.2s;
+    
+    border-radius: 10px;
+
+    position: relative;
+}
+.header__airAlert:hover {box-shadow: 0 0 40px rgba(0, 0, 0, 1);;}
 .header__airAlertIcon{
     height: 30px;
     position: absolute;
-    left: 6px;
+    left: 8px;
+
 
     border-radius: 10px;
+}
+.header__airAlert-text{
+    font-size: 0;
+    color: #fff;
+    text-decoration: none;
 }
 /*Button telegram*/
 .header__telegram {
@@ -102,9 +134,7 @@ main {
     position: relative;
 }
 
-.header__telegram:hover {
-    box-shadow: 0 0 40px rgba(46, 147, 230, 1);;
-}
+.header__telegram:hover {box-shadow: 0 0 40px rgba(46, 147, 230, 1);;}
 
 .header__telegramIcon {
     height: 30px;
@@ -473,7 +503,56 @@ input#modified:hover {
 
         margin: 20px 0;
     }
+    .header__text {
+        padding: 0 0 0 6%;
+    }
 }
+
+@media (max-width: 1000px){
+    .header__text {
+        padding: 0;
+    }
+}
+
+@media (max-width: 700px){
+    .header__button{
+        display: flex;
+    
+        margin: 0 calc(1em*.1) 0 1px;
+    }
+    /*Button deepState*/
+    .header__deepState {
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        
+        background: none;
+        transition: all 0.8s ease 0.2s;
+        
+        border-radius: none;
+
+        position: relative;
+    }
+    .header__deepState:hover {box-shadow:none;}
+    .header__deepStateIcon {
+        height: 0;
+        position: relative;
+        left: 0;
+        top: 0px;
+
+        border-radius: 10px;
+    }
+    .header__deepState-text {
+        font-size: 0;
+        color: #fff;
+        text-decoration: none;
+    }
+    /*airAlert*/
+    .header__airAlert{
+        margin: 0 3px 0 1%;
+    }
+}
+
 
 /* Mobile styling */
 
@@ -534,7 +613,6 @@ input#modified:hover {
         width: 100%;
         height: 450px;
     }
-
     /*airAlert*/
     .header__airAlert{
         padding: 10px 16px 20px 35px;
@@ -554,10 +632,10 @@ input#modified:hover {
 }
 @media (max-width: 420px) {
     /*Button airAlert*/
-        .header__airAlert{
-            padding: 10px 25px 10px 28px;
-            margin: 0 2px 0 3%;
-        }
+    .header__airAlert{
+        padding: 10px 25px 10px 28px;
+        
+    }
     /*iframe*/
     .iframe{
         overflow: hidden;
@@ -599,6 +677,7 @@ input#modified:hover {
         margin: 0 5px 14px 5px;
         height: 84px;
     }
+
     .header__text {
         font-size: calc(1rem * 1.5);
         font-family: 'Tilt Prism', cursive;
@@ -612,7 +691,7 @@ input#modified:hover {
         font-size: calc(1rem*1.4);
         text-align: center;
 
-        margin: 0 0 0 20px;
+        padding: 0 0 0 10px;
 
     }
     /*Iframe*/
