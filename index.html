@@ -48,51 +48,8 @@
 
   </head>
   <body>
-    
-    <header class="header">
-
-      <div class="header__content">
-
-        <a href="https://www.dw.com/uk/metalobruht-ci-mistecke-polotno-so-robiti-zi-znisenou-vijskovou-tehnikou-rf/a-63654535" class="header__img">
-          <img  src="headerIcon.jpg" alt="">
-        </a>
-
-        <p class="header__text">Russian losses</p>
-
-        <div class="header__content">
-          <div class="header__burger-block">
-            <div class="header__burger">
-              <span></span>
-            </div>
-          </div>
-
-          <div class="header__menu">
-            <div class="header__button">
-
-              <a href="https://t.me/russianlossesinua" class="header__telegram">
-                <img src="telegramIcon.svg" alt="" class="header__telegramIcon">
-                <span class="header__telegram-text"> Telegram </span>
-              </a>
-
-              <a href="https://deepstatemap.live/#6/49.438/32.053" class="header__deepState">
-                <img src="deepstate__logo.png" alt="" class="header__deepStateIcon">
-                <span class="header__deepState-text"> Deep state map </span>
-              </a>
-              
-              <a href="https://map.ukrainealarm.com/" class="header__airAlert">
-                <img src="airAlertIcon.webp" alt="" class="header__airAlertIcon">
-                <span class="header__airAlert-text"> Air alert map </span>
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <header class="floor floor--header">
     </header>
-
-    <div class="prop"></div>
-
     <main class="floor floor--main">
 
       <div class="image-gallery-wrapper">
@@ -136,7 +93,7 @@
 
           <div id="language-switcher">
             <label class="trn" for="lang">Language:</label>
-              <select class="select-language" name="lang" id="lang">
+              <select name="lang" id="lang">
                 <option value="en" selected="selected" >Eng</option>
                 <option value="ua">Uk</option>
               </select>
@@ -191,32 +148,9 @@
 
       </div>
 
-      <div class="textTelegram1400">
-        Telegram Сhannel Online
-      </div>
-
-      <iframe class="iframe" id="preview"  src="https://xn--r1a.website/s/russianlossesinua"></iframe>
+      <iframe id="preview" style="border:0px;height:auto;width:500px;margin:5px;box-shadow: 0 0 16px 3px rgba(0,0,0,.2);" src="https://xn--r1a.website/s/russianlossesinua"></iframe>
 
     </main>
-
-    <div class="deepState">
-      <div class="deepState__header">
-        <div class="deepState___logo">
-          
-          <a class="deepState__img" href="https://deepstatemap.live/#6/49.438/32.053">
-            <img src="deepstate__logo.png" alt="">
-          </a>
-          
-          <h4 class="deepState__title trn">Map of the war in Ukraine</h4>
-        
-        </div>
-      </div>
-
-      <div class="deepState__content">
-        <iframe class="iframe iframe__deapState" id="preview"  src="https://deepstatemap.live/#6/49.438/32.053"></iframe>
-      </div>
-      
-    </div>
 
     <footer class="floor floor--footer">
       <div class="floor__max-width">
@@ -224,7 +158,7 @@
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <div class="addthis_inline_share_toolbox"></div>
     
-        <p class="footer__text">© 2022</p>
+        <p>© 2022</p>
       </div>
     </footer>
   </body>
@@ -309,15 +243,5 @@ $(function () {
       Filters.apply();
     });
 });
-//header__burger
-let menu = document.querySelector('.header__menu');
-let burger = document.querySelector('.header__burger');
-let prope = document.querySelector('.prop');
-burger.onclick = function(e) {
-    menu.classList.toggle('active');
-    burger.classList.toggle('active');
-    prope.classList.toggle('active');
-    document.body.classList.toggle('lock');
-}
   </script>
 </html>
