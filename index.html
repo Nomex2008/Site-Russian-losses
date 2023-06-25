@@ -56,30 +56,42 @@
         <a href="https://www.dw.com/uk/metalobruht-ci-mistecke-polotno-so-robiti-zi-znisenou-vijskovou-tehnikou-rf/a-63654535" class="header__img">
           <img  src="headerIcon.jpg" alt="">
         </a>
+
         <p class="header__text">Russian losses</p>
 
-        <div class="header__button">
+        <div class="header__content">
+          <div class="header__burger-block">
+            <div class="header__burger">
+              <span></span>
+            </div>
+          </div>
 
-          <a href="https://t.me/russianlossesinua" class="header__telegram">
-            <img src="telegramIcon.svg" alt="" class="header__telegramIcon">
-            <span class="header__telegram-text"> Telegram </span>
-          </a>
+          <div class="header__menu">
+            <div class="header__button">
 
-          <a href="https://deepstatemap.live/#6/49.438/32.053" class="header__deepState">
-            <img src="deepstate__logo.png" alt="" class="header__deepStateIcon">
-            <span class="header__deepState-text"> Air alert map </span>
-          </a>
-          
-          <a href="https://map.ukrainealarm.com/" class="header__airAlert">
-            <img src="airAlertIcon.webp" alt="" class="header__airAlertIcon">
-            <span class="header__airAlert-text"> Air alert map </span>
-          </a>
+              <a href="https://t.me/russianlossesinua" class="header__telegram">
+                <img src="telegramIcon.svg" alt="" class="header__telegramIcon">
+                <span class="header__telegram-text"> Telegram </span>
+              </a>
 
+              <a href="https://deepstatemap.live/#6/49.438/32.053" class="header__deepState">
+                <img src="deepstate__logo.png" alt="" class="header__deepStateIcon">
+                <span class="header__deepState-text"> Deep state map </span>
+              </a>
+              
+              <a href="https://map.ukrainealarm.com/" class="header__airAlert">
+                <img src="airAlertIcon.webp" alt="" class="header__airAlertIcon">
+                <span class="header__airAlert-text"> Air alert map </span>
+              </a>
+
+            </div>
+          </div>
         </div>
-
       </div>
 
     </header>
+
+    <div class="prop"></div>
 
     <main class="floor floor--main">
 
@@ -297,5 +309,15 @@ $(function () {
       Filters.apply();
     });
 });
+//header__burger
+let menu = document.querySelector('.header__menu');
+let burger = document.querySelector('.header__burger');
+let prope = document.querySelector('.prop');
+burger.onclick = function(e) {
+    menu.classList.toggle('active');
+    burger.classList.toggle('active');
+    prope.classList.toggle('active');
+    document.body.classList.toggle('lock');
+}
   </script>
 </html>
