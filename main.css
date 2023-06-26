@@ -109,7 +109,7 @@ main {
 
     position: relative;
 }
-.header__airAlert:hover {box-shadow: 0 0 40px rgba(0, 0, 0, 1);;}
+.header__airAlert:hover {box-shadow: 0 0 40px rgba(0, 0, 0, 1);}
 .header__airAlertIcon{
     height: 30px;
     position: absolute;
@@ -291,8 +291,7 @@ h2 {
     padding: 10px 15px;
     text-transform: uppercase;
     font-weight: bold;
-    color: var(--button-text-dark);
-    border: 1px solid var(--button-text-dark);
+    border: 1px solid  black;
 }
 
 #clear {
@@ -365,12 +364,91 @@ input#modified {
     margin-left: 20px;
     transition: all .2s ease-in-out;
     outline: none;
+    padding-left: 1.5%;
+    background-repeat: no-repeat;
 }
 input#modified:hover {
     filter: contrast(50%);
     transition: all .2s ease-in-out;
 }
+/*upgreyd style*/
 
+.filter-toggler span{
+    font-family: 'Black Ops One', cursive;
+}
+
+#vehicleGroup{
+    color: orange;
+    font-family: 'Black Ops One', cursive;
+}
+
+.trn{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+label.trn{
+    font-family: 'Black Ops One', cursive;
+}
+span.trn.label{
+    font-family: 'Abril Fatface', cursive;
+}
+.trn-status{
+    font-family: 'Black Ops One', cursive;
+    color: black;
+}
+.trn-VehicleGroup{
+    font-family: 'Black Ops One', cursive;
+    color: black;
+}
+
+.item input:hover{
+    box-shadow: 0 0 4px gray;
+}
+
+#vehicle {
+    background-image: url("searchIcon.png");
+    background-repeat: no-repeat;
+    background-position: 3.5% 50%;
+    background-size: 13% 80%;
+}
+#vehicle:hover{
+    box-shadow: 0 0 10px #16192F;
+}
+#today{
+    margin: 0 1% 0 1%;
+    border-radius: 10px;
+}
+#yesterday{
+    margin: 0 1% 0 1%;
+    border-radius: 10px;
+}
+#yesterday span.trn,#today span.trn{
+    font-family: 'Belanosima', sans-serif;
+    color: #57191E;
+}
+#today:hover,#yesterday:hover{
+    box-shadow: 0 0 10px #57191E;
+}
+#apply{
+    border-radius: 3px;   
+}
+#apply span{
+    font-family: 'Merriweather', serif;
+}
+#clear span{
+    font-family: 'Merriweather', serif;
+}
+
+#copylink{
+    transition: all .3s ease 0;
+    border-radius: 10px;
+}
+#copylink span {
+    color: #57191E;
+}
+#copylink:hover{
+    box-shadow: 0 0 10px #57191E;
+}
 /*select-language*/
 
 .select-language { 
@@ -415,7 +493,6 @@ input#modified:hover {
 .textTelegram1400{
     font-size: 0;
 }
-
 /*iframe*/
 
 .iframe{
@@ -611,6 +688,7 @@ input#modified:hover {
         padding: 20px 15px 20px 40px;
         margin: 15px 4% 15px 4%;
     }
+
 
     .header__telegramIcon {
         height: 50px;
