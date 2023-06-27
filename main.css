@@ -394,11 +394,11 @@ span.trn.label{
 }
 .trn-status{
     font-family: 'Black Ops One', cursive;
-    color: black;
+    color: #fff;
 }
 .trn-VehicleGroup{
     font-family: 'Black Ops One', cursive;
-    color: black;
+    color: #fff;
 }
 
 .item input:hover{
@@ -780,10 +780,14 @@ span.trn.label{
         margin-top: 0;
     }
     .footer__text{
-        margin: 0 0 0 0;
+        margin: 10px 0 0 0;
         padding: 12px 0;
     
         background-color: rgba(255,255,255,.6); 
+    }
+    #vehicle {
+        background-position: 3.5% 50%;
+        background-size: 10% 80%;
     }
 
     /*Button telegram*/
@@ -847,6 +851,9 @@ span.trn.label{
 
 }
 @media (max-width: 420px) {
+    #vehicle {
+        background-size: 11% 80%;
+    }
     /*iframe*/
     .iframe{
         overflow: hidden;
@@ -861,8 +868,12 @@ span.trn.label{
     .deepState__title {
         font-size: calc(1rem*1.6);
     }
+
 }
 @media (max-width: 360px) {
+    #vehicle {
+        background-size: 13% 80%;
+    }
     /*Button telegram*/
     .header__telegram {
         padding: 15px 15px 15px 40px;
